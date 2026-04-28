@@ -255,17 +255,17 @@ Focar em: segurança (MD5, credenciais), N+1 queries, constantes duplicadas, dad
    ```
 
 ### Checklist Parte 3
-- [ ] Skill copiada para `task-manager-api/.claude/skills/refactor-arch/`
-- [ ] Fase 1 detecta Python + Flask e arquitetura Layered
-- [ ] Fase 2 encontra ≥ 5 findings com ao menos 1 CRITICAL ou HIGH
-- [ ] Fase 2 pausa e pede confirmação antes da Fase 3
-- [ ] Relatório salvo em `reports/audit-project-3.md`
-- [ ] MD5 substituído por hash seguro
-- [ ] `password` removido das respostas da API
-- [ ] Credenciais movidas para `.env`
-- [ ] Aplicação inicia sem erros após refatoração
-- [ ] Todos os endpoints originais respondem corretamente
-- [ ] Commit realizado
+- [x] Skill copiada para `task-manager-api/.claude/skills/refactor-arch/`
+- [x] Fase 1 detecta Python + Flask e arquitetura Layered
+- [x] Fase 2 encontra ≥ 5 findings com ao menos 1 CRITICAL ou HIGH (11 findings: 3 CRITICAL, 2 HIGH, 3 MEDIUM, 3 LOW)
+- [x] Fase 2 pausa e pede confirmação antes da Fase 3
+- [x] Relatório salvo em `reports/audit-project-3.md`
+- [x] MD5 substituído por hash seguro
+- [x] `password` removido das respostas da API
+- [x] Credenciais movidas para `.env`
+- [x] Aplicação inicia sem erros após refatoração
+- [x] Todos os endpoints originais respondem corretamente
+- [x] Commit realizado
 
 ---
 
