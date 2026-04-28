@@ -103,7 +103,7 @@ O repositório raiz é:
 - [x] Fase 3 cria estrutura MVC
 - [x] Aplicação inicia sem erros após refatoração
 - [x] Endpoints originais respondem corretamente
-- [ ] Commit realizado
+- [x] Commit realizado
 
 ---
 
@@ -170,15 +170,15 @@ O repositório raiz é:
    ```
 
 ### Checklist Parte 2
-- [ ] Skill copiada para `ecommerce-api-legacy/.claude/skills/refactor-arch/`
-- [ ] Fase 1 detecta Node.js + Express corretamente
-- [ ] Fase 2 encontra ≥ 5 findings com ao menos 1 CRITICAL ou HIGH
-- [ ] Fase 2 pausa e pede confirmação antes da Fase 3
-- [ ] Relatório salvo em `reports/audit-project-2.md`
-- [ ] Fase 3 decompõe AppManager em camadas MVC
-- [ ] Aplicação inicia sem erros após refatoração
-- [ ] Endpoints originais respondem corretamente
-- [ ] Commit realizado
+- [x] Skill copiada para `ecommerce-api-legacy/.claude/skills/refactor-arch/`
+- [x] Fase 1 detecta Node.js + Express corretamente
+- [x] Fase 2 encontra ≥ 5 findings com ao menos 1 CRITICAL ou HIGH (10 findings: 3 CRITICAL, 2 HIGH, 3 MEDIUM, 2 LOW)
+- [x] Fase 2 pausa e pede confirmação antes da Fase 3
+- [x] Relatório salvo em `reports/audit-project-2.md`
+- [x] Fase 3 decompõe AppManager em camadas MVC
+- [x] Aplicação inicia sem erros após refatoração
+- [x] Endpoints originais respondem corretamente
+- [x] Commit realizado
 
 ---
 
