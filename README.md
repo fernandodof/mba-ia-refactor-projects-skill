@@ -434,6 +434,60 @@ A skill deve atingir os seguintes mínimos em **todos os 3 projetos**:
 - [The Complete Guide to Building Skills for Claude (PDF)](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) — Guia completo da Anthropic sobre construção de Skills
 - [Equipping Agents for the Real World with Agent Skills](https://claude.com/blog/equipping-agents-for-the-real-world-with-agent-skills) — Blog oficial da Anthropic sobre Agent Skills
 
+## Analise Manual
+
+### Code smells project 
+
+### Models (models.py) tem é uma classe "god" com operaçoes em todas as entidades.
+- Isso deveria ser separados em aquivos por domínho
+- SQL em texto por todo arquivo (SQL injection)
+- Repetição de código 
+- Senhas em texto puro
+
+### O arquivo de Database (database.py) também tem muitas coisas juntas 
+  
+- Conexão, Schema e Seed estão juntos
+- Ao chamar get_db() já cria tabelas e insere dados. Isso acontecia em todas chamadas para essa função
+- O parâmetro check_same_thread foi definido para false, isso pode casuar dados corrompidos.
+- Vários dados são permitidos serem nulos
+- A senha está no próprio arquivo
+
+### Controllers, controllers controla muita coisa
+
+- Várias operações em um arquivo só 
+- Erros são retornardos sem tratamento
+- Códigos html de forma manual 
+- Métodos longos com muitas operações 
+- Falta de paginação
+
+## Ecomerce Api Legacy
+
+### AppManager.js
+
+- Senha "123456" no arquivo 
+- Usuário Seed com senha 123
+- Mock usado no cartão de crétito
+- Banco em memória
+
+### app.js
+
+- Falta de gerenciamento de erros
+- Setup routes depende do db inicado e essa ordem não é garantida
+
+### utils.js
+
+- Cache global em memória
+- Chaves e senhas direto no código
+- Encriptação de forma muito simples
+
+### Task Manager Api
+
+- notification_service: Credenciais de e-mail no código.
+- expõe o hash da senha na resposta da API
+- rotas sem autenticação
+- expõe o hash da senha na resposta da API
+- NotificationService criado mas nunca chamado em lugar nenhum.
+
 ---
 
 ## Dicas Finais
