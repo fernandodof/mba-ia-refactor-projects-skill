@@ -1,5 +1,5 @@
 ================================
-PHASE 1: PROJECT ANALYSIS
+PHASE 1: PROJECT ANALYSIS — ecommerce-api-legacy
 ================================
 Language:      JavaScript (Node.js)
 Framework:     Express 4.18.2
