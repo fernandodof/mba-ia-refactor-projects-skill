@@ -1,6 +1,8 @@
 from database import db
 from datetime import datetime
 import hashlib
+import os
+
 
 class User(db.Model):
     __tablename__ = 'users'
@@ -18,21 +20,24 @@ class User(db.Model):
             'id': self.id,
             'name': self.name,
             'email': self.email,
-            'password': self.password,
             'role': self.role,
             'active': self.active,
             'created_at': str(self.created_at)
         }
 
     def set_password(self, pwd):
-
-        self.password = hashlib.md5(pwd.encode()).hexdigest()
+        salt = os.urandom(32)
+        key = hashlib.pbkdf2_hmac('sha256', pwd.encode(), salt, 100_000)
+        self.password = salt.hex() + ':' + key.hex()
 
     def check_password(self, pwd):
-        return self.password == hashlib.md5(pwd.encode()).hexdigest()
+        try:
+            salt_hex, key_hex = self.password.split(':')
+            salt = bytes.fromhex(salt_hex)
+            key = hashlib.pbkdf2_hmac('sha256', pwd.encode(), salt, 100_000)
+            return key.hex() == key_hex
+        except Exception:
+            return False
 
     def is_admin(self):
-        if self.role == 'admin':
-            return True
-        else:
-            return False
+        return self.role == 'admin'
