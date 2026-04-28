@@ -96,13 +96,13 @@ O repositório raiz é:
    ```
 
 ### Checklist Parte 1
-- [ ] Fase 1 detecta stack corretamente
-- [ ] Fase 2 encontra ≥ 5 findings com ao menos 1 CRITICAL ou HIGH
-- [ ] Fase 2 pausa e pede confirmação antes da Fase 3
-- [ ] Relatório salvo em `reports/audit-project-1.md`
-- [ ] Fase 3 cria estrutura MVC
-- [ ] Aplicação inicia sem erros após refatoração
-- [ ] Endpoints originais respondem corretamente
+- [x] Fase 1 detecta stack corretamente
+- [x] Fase 2 encontra ≥ 5 findings com ao menos 1 CRITICAL ou HIGH (12 findings: 4 CRITICAL, 3 HIGH, 3 MEDIUM, 2 LOW)
+- [x] Fase 2 pausa e pede confirmação antes da Fase 3
+- [x] Relatório salvo em `reports/audit-project-1.md`
+- [x] Fase 3 cria estrutura MVC
+- [x] Aplicação inicia sem erros após refatoração
+- [x] Endpoints originais respondem corretamente
 - [ ] Commit realizado
 
 ---
